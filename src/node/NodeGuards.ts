@@ -71,6 +71,14 @@ export class NodeGuards {
      * @param {Node} node
      * @returns {boolean}
      */
+    public static isBinaryExpressionNode (node: ESTree.Node): node is ESTree.BinaryExpression {
+        return node.type === NodeType.BinaryExpression;
+    }
+
+    /**
+     * @param {Node} node
+     * @returns {boolean}
+     */
     public static isBlockStatementNode (node: ESTree.Node): node is ESTree.BlockStatement {
         return node.type === NodeType.BlockStatement;
     }

@@ -47,6 +47,7 @@ export interface IOptions {
     readonly sourceMapSourcesMode: TTypeFromEnum<typeof SourceMapSourcesMode>;
     readonly splitStrings: boolean;
     readonly splitStringsChunkLength: number;
+    readonly substitution: boolean;
     readonly stringArray: boolean;
     readonly stringArrayCallsTransform: boolean;
     readonly stringArrayCallsTransformThreshold: number;

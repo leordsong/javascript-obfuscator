@@ -326,6 +326,12 @@ export class Options implements IOptions {
      * @type {boolean}
      */
     @IsBoolean()
+    public readonly substitution!: boolean;
+
+    /**
+     * @type {boolean}
+     */
+    @IsBoolean()
     public readonly stringArray!: boolean;
 
     /**

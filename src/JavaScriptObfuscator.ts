@@ -90,6 +90,7 @@ export class JavaScriptObfuscator implements IJavaScriptObfuscator {
         NodeTransformer.ScopeIdentifiersTransformer,
         NodeTransformer.ScopeThroughIdentifiersTransformer,
         NodeTransformer.SplitStringTransformer,
+        NodeTransformer.SubstitutionTransformer,
         NodeTransformer.StringArrayControlFlowTransformer,
         NodeTransformer.StringArrayRotateFunctionTransformer,
         NodeTransformer.StringArrayScopeCallsWrapperTransformer,
@@ -219,6 +220,10 @@ export class JavaScriptObfuscator implements IJavaScriptObfuscator {
 
         if (this.options.deadCodeInjection) {
             astTree = this.runNodeTransformationStage(astTree, NodeTransformationStage.DeadCodeInjection);
+        }
+
+        if (this.options.substitution) {
+            astTree = this.runNodeTransformationStage(astTree, NodeTransformationStage.Substitution);
         }
 
         astTree = this.runNodeTransformationStage(astTree, NodeTransformationStage.ControlFlowFlattening);

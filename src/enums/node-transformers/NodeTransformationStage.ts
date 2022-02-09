@@ -8,5 +8,6 @@ export enum NodeTransformationStage {
     RenameIdentifiers = 'RenameIdentifiers',
     RenameProperties = 'RenameProperties',
     Simplifying = 'Simplifying',
-    StringArray = 'StringArray'
+    StringArray = 'StringArray',
+    Substitution = 'Substitutioin'
 }

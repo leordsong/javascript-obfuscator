@@ -50,6 +50,7 @@ export const DEFAULT_PRESET: TInputOptions = Object.freeze({
     sourceMapSourcesMode: SourceMapSourcesMode.SourcesContent,
     splitStrings: false,
     splitStringsChunkLength: 10,
+    substitution: false,
     stringArray: true,
     stringArrayCallsTransform: false,
     stringArrayCallsTransformThreshold: 0.5,
